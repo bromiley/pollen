@@ -28,7 +28,7 @@ def test_api(server, apikey):
     return True
 
 def server_config():
-    ''' Collect TheHive server and API details, followed by a connectivity test '''
+    """Collect TheHive server and API details, followed by a connectivity test"""
     hiveserver = input("\nPlease enter the address for TheHive server you want to connect to: ")
     hiveapi = input("Please enter the API key for that particular server: ")
     api_test = test_api(hiveserver, hiveapi)
@@ -43,11 +43,13 @@ def server_config():
             config.write(configfile)
 
 def get_config():
+    """Import config settings"""
     config.read('.pollen_config')
     server_details = config['TheHive']
     return server_details['server_url'], server_details['server_api']
 
 def get_api():
+    """Establish API"""
     server_details = get_config()
     api = TheHiveApi(server_details[0], server_details[1])
     return api

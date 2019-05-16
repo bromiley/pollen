@@ -19,6 +19,7 @@ from cells import config
 class PollenCaseTaskCmd(cmd.Cmd):
     '''Case- and task-specific cmdloop'''
     def __init__(self, prompt, case_id, task_id):
+        '''Class initialization'''
         # Bring in case and task variables. case_id isn't needed right now, but keeping just in case
         self.prompt = prompt
         self.case_id = case_id
@@ -48,6 +49,7 @@ class PollenCaseTaskCmd(cmd.Cmd):
 class PollenCaseCmd(cmd.Cmd):
     '''Case-specific cmdloop'''
     def __init__(self, prompt, case_id, case_name):
+        '''Class initialization'''
         self.prompt = prompt
         self.case_id = case_id
         self.case_name = case_name
@@ -101,6 +103,7 @@ class PollenConfigCmd(cmd.Cmd):
     '''Sub-module to handle stats and TheHive configuration'''
     # Initialization; check for config file right at the beginning
     def __init__(self, prompt, config_found):
+        '''Class initialization'''
         self.prompt = prompt
         self.config_found = config_found
         self.configparser = configparser.ConfigParser()
@@ -152,7 +155,7 @@ class PollenConfigCmd(cmd.Cmd):
 class PollenCmd(cmd.Cmd):
     ''' Base Pollen Cmdloop '''
     def __init__(self, config_present=True):
-        '''Init function to check for config and create prompt'''
+        '''Class initialization'''
         self.prompt = '(pollen) '
         self.config_present = config_present
         super(PollenCmd, self).__init__()
