@@ -55,6 +55,7 @@ Keeping the busy analysis bees busy!
 """)
 
 def check_config():
+    """Quick function to check whether config is valid or not"""
     config = configparser.ConfigParser()
     config_read = config.read('.pollen_config')
     if config_read:
