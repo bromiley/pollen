@@ -50,6 +50,10 @@ Config file not found; would you like to create it now? (y/n):
 
 The script will walk you through setting up the config file. All you need is your Hive address and API key. And then, you're off to the races!
 
+### [OPTIONAL]
+
+Pollen also has some script features that can restart the script and autoload new settings. If you'd like to enable these, do a quick `chmod +x pollen.py`.
+
 ---
 
 ## Usage
