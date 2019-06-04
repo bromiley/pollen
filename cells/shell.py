@@ -6,6 +6,7 @@ import cmd
 import sys
 import os
 import configparser
+import subprocess
 
 # thehive4py import(s)
 from thehive4py.models import Case, CaseTask, CaseTaskLog
@@ -257,6 +258,11 @@ class PollenCmd(cmd.Cmd):
     def do_clear(self, *_):
         '''Clear screen'''
         os.system('clear')
+    def do_shell(self, line):
+        '''Pass a command through to the shell'''
+        print("Running the command {0}".format(line))
+        output = os.popen(line).read()
+        print(output)
 
 if __name__ == "__main__":
     pass
