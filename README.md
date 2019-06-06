@@ -29,7 +29,7 @@ See something else you'd like to have? Drop me a note or submit an issue, and I'
 pollen can be installed and run by simply cloning this repository, and running:
 
 ```bash
-pip3 install -r requirements.txt
+python3 -m pip install -r requirements.txt
 python3 pollen.py -c
 ```
 
